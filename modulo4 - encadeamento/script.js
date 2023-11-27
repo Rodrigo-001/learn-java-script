@@ -45,8 +45,14 @@ function obtemPreco() {
         .then((data) => {
             console.log("Tipo: " + typeof (data));
             console.log(data);
-            resul.innerHTML += `RESPOSTA: ${data[0].price}`;
+            resul.innerHTML += `RESPOSTA: U$ ${data[0].price}`;
+        })
+        .catch((error)=>{
+            resul.style.color = "red";
+            resul.innerHTML = `Não foi possível obter o preço. </br>${error}`;
         });
+
+
     resul.innerHTML = `Esse botão faz quase a mesma coisa que o outro, porém de maneira mais concisa, <strong>sem aninhamento de funções:</strong></br><p>1° Obter objeto response;</p><p>2° Converter para Json;</p><p>3° Obter valor de chave <strong>preço.</strong></p></br></br>`;
 
 }
@@ -67,5 +73,9 @@ function obterGatinho() {
         })
         // obter url da imagem contido no json e exibir na tela
         .then((data) => { resul.innerHTML = `<img src="${data[0].url}"><p>Neste exemplo faço uma requisição para a API TheCat, que retorna um objeto Promisse. Então eu converto-o para Json e obtenho a url da foto do gato.</p>` })
+        .catch((error)=>{
+            resul.style.color = "red";
+            resul.innerHTML = `Não foi possível obter o gatinho.</br> ${error}`;
+        });
 
 }
