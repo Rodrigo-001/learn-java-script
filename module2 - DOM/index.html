@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisao</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- linkar ao script -->
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../module1 - conversao/">1 Conversão</a>
+            <a href="../module2 - DOM/index.html">2 DOM</a>
+            <a href="../modulo3 - promise/">3 Promisses</a>
+            <a href="../modulo4 - encadeamento/">4 Encadeamento</a>
+
+        </nav>
+    </header>
+    <main>
+        <h1>Manipulando elementos pelo DOM</h1>
+        <div>
+            <ul>
+                <p>Abordado neste módulo: Mouse events no HTML, selecionando elementos por querySeletor, EventListeners.
+                </p>
+                <div>
+                    <p>Evento no html</p>
+                    <button id="botaoCor" onclick="alterarCor()">Alterar cor</button>
+                    <p>Evento no Java Script (EventListener)</p>
+                    <button id="botaoEvent">Mouse events</button>
+                </div>
+            </ul>
+        </div>
+    </main>
+    <script>
+        // Selecionando elementos
+        let botaoEvent = document.querySelector("#botaoEvent");
+
+        botaoEvent.addEventListener("mouseenter", mouseEvents);
+        botaoEvent.addEventListener("mouseout", mouseEvents);
+        botaoEvent.addEventListener("click", mouseEvents);
+
+        function alterarCor() {
+            botaoCor.style.backgroundColor = "red";
+            botaoCor.innerHTML = "Alterada!";
+            alert("Cor alterada por meio do onclick do botão. Pratica não recomendada");
+        }
+        // Função recebe o evento como parâmetro e altera o texto do botão de acordo com o evento.
+        function mouseEvents() {
+
+            if (event.type == "mouseenter") {
+                botaoEvent.innerHTML = "Entrou"
+            } else if (event.type == "mouseout") {
+                botaoEvent.innerHTML = "Saiu"
+            } else if (event.type == "click") {
+                botaoEvent.innerHTML = "Clicou"
+                botaoEvent.style.backgroundColor = "red";
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 22px;
+    background-color: aquamarine;
+}
+ul{
+    background-color: white;
+    padding: 22px;
+    border-radius: 10px;
+    /* min-height: 50vh;
+    min-width: 50vw; */
+}
+li{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    
+}
+h1{
+    margin: 12px auto;
+}
+button{
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.secaoBotoes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+div{
+    margin: 0 auto;
+    text-align: center;
+}
+
+img{
+    width: 220px;
+    border-radius: 6px;
+}
